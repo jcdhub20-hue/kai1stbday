@@ -19,6 +19,7 @@
     --silver:#9AA5B1;
   }
   *{box-sizing:border-box; -webkit-tap-highlight-color: transparent;}
+  img{ -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; pointer-events:none; }
   html,body{
     margin:0; padding:0; height:100%; overflow:hidden;
     background: radial-gradient(130% 100% at 50% 0%, #ffb52e 0%, var(--sun-gold) 55%, #d98d00 100%);
@@ -182,7 +183,8 @@
   .card{
     width:100%; height:100%; position:relative; transform-style:preserve-3d;
     transition: transform .7s cubic-bezier(.2,.8,.25,1);
-    cursor:pointer;
+    cursor:pointer; touch-action:manipulation;
+    -webkit-touch-callout:none; -webkit-user-select:none; user-select:none;
   }
   .card.flipped{ transform: rotateY(180deg); }
   .card.enter{ animation: cardEnter .5s cubic-bezier(.2,.8,.25,1); }
@@ -410,7 +412,7 @@
   </div>
 
   <div class="brand">
-    <h1 class="display">Kai's First Birthday Pull!</h1>
+    <h1 class="display">Kai's Crew</h1>
     <p>Booster Pack · Limited 1st Birthday Edition</p>
   </div>
   <button class="mute-btn" id="muteBtn" aria-label="Toggle sound">🔊</button>
@@ -820,7 +822,7 @@ function triggerEpicReveal(){
   flash.classList.add('go');
   spawnConfetti(90, ['#F4A300','#E4572E','#2EC4B6','#ff7ad9','#FDF6E3']);
   requestAnimationFrame(()=> cardEl.classList.add('flipped'));
-  navHint.textContent = 'YOU ARE INVITED TO LUCIAN KAI FIRST BIRTHDAY! 🎉';
+  navHint.textContent = 'Happy 1st Birthday, Kai! 🎉';
   nextBtn.disabled = false;
   setTimeout(()=>{
     invitePanel.classList.add('show');
