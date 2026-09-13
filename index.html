@@ -298,20 +298,19 @@
   .invite-panel{
     display:none; flex-direction:column; gap:8px; align-items:center; text-align:center;
     background:rgba(253,246,227,.9); border:1px solid rgba(22,24,29,.15);
-    border-radius:12px; padding:14px 18px; max-width:360px; width:92vw;
-    box-shadow: 0 8px 20px rgba(0,0,0,.15); max-height:70vh; overflow-y:auto;
+    border-radius:12px; padding:14px 18px; max-width:280px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
   }
   .invite-panel.show{ display:flex; }
   .invite-panel .line{ font-size:13px; color:var(--ink); font-weight:700; }
   .invite-panel .line b{ color:var(--skate-red); }
-  .rsvp-embed{
-    margin-top:6px; width:100%; border-radius:10px; overflow:hidden;
-    border:1px solid rgba(22,24,29,.12); background:#fff;
+  .rsvp-btn{
+    margin-top:2px; display:block; text-align:center; text-decoration:none; width:100%;
+    background:var(--skate-red); color:var(--cream); font-weight:800; font-size:13.5px;
+    padding:10px 12px; border-radius:9px; box-shadow:0 4px 0 #a83c1c;
+    transition: transform .12s;
   }
-  .rsvp-embed iframe{ display:block; width:100%; border:0; }
-  .rsvp-fallback{
-    font-size:11px; color:rgba(22,24,29,.55); text-decoration:underline; margin-top:2px;
-  }
+  .rsvp-btn:active{ transform:translateY(3px); box-shadow:0 1px 0 #a83c1c; }
 
   /* controls */
   .controls{ display:flex; align-items:center; gap:16px; margin-top:4px; }
@@ -466,7 +465,7 @@
   </div>
 
   <div class="brand">
-    <h1 class="display">Kai's Crew</h1>
+    <h1 class="display">LUCIAN KAI'S FIRST BIRTHDAY PULL!!!</h1>
     <p>Booster Pack · Limited 1st Birthday Edition</p>
   </div>
   <button class="mute-btn" id="muteBtn" aria-label="Toggle sound">🔊</button>
@@ -564,11 +563,7 @@
       <div class="line">🎂 <b>Lucian Kai Divinagracia</b> turns ONE!</div>
       <div class="line">📅 <b>Friday, October 9, 2026</b> · Time TBA</div>
       <div class="line">📍 Venue TBA</div>
-      <div class="rsvp-embed">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1dmM1dzr2hANnIs3Y9GaRewegrMO0DEdoCRO8KJ4AgrJCiQ/viewform?embedded=true"
-                width="100%" height="420" frameborder="0" marginheight="0" marginwidth="0" loading="lazy">Loading RSVP form…</iframe>
-      </div>
-      <a class="rsvp-fallback" href="https://forms.gle/hzraruHVYCoJ1N1QA" target="_blank" rel="noopener">Trouble seeing the form? Open it directly →</a>
+      <a class="rsvp-btn" href="https://forms.gle/hzraruHVYCoJ1N1QA" target="_blank" rel="noopener">RSVP via Google Form →</a>
     </div>
   </div>
 
